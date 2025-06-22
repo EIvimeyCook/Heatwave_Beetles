@@ -3,7 +3,7 @@ source("Script/01-load_packages.R")
 source("Script/02-load_tidy_data.R")
 
 # LRS #######
-
+writeLines(capture.output(sessionInfo()), "sessionInfo.txt")
 #create list for LRS models
 list_lrs <- list()
 
