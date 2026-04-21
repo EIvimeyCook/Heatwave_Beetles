@@ -10,7 +10,6 @@ Edward R. Ivimey-Cook, Sarah Glavan, Sophie Bricout, Claudio Piani, and Elena C.
 School of Biological Sciences, University of East Anglia, UK
 The American University of Paris, Paris, France
 
-
 ## Contact
 📧 Edward R. Ivimey-Cook: e.ivimeycook@gmail.com Elena C. Berg: eberg@aup.edu
 
@@ -95,11 +94,10 @@ loaded via a namespace (and not attached):
 
 ### `renv.lock`
 
-lockfile for renv
+lockfile for renv. Links with the renv file.
 
 ## Code
 Scripts should be run in the following order:
-
 
 1. **`Script/01-load_packages.R`**
 
