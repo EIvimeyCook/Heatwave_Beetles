@@ -94,7 +94,11 @@ loaded via a namespace (and not attached):
 
 ### `renv.lock`
 
-lockfile for renv. Links with the renv file.
+lockfile for renv. Links with the renv folder which contains the library of locked R packages. 
+
+### `Analysis.RProj`
+
+RStudio Project file. Open this for everything to become relative to this project file. 
 
 ## Code
 Scripts should be run in the following order:
