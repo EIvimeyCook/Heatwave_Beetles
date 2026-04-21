@@ -29,6 +29,9 @@ pacman::p_load("tidyverse",
               "colorspace",
                "ragg")
 
+#capture session info for reproducibility
+writeLines(capture.output(sessionInfo()), "sessionInfo.txt")
+
 # Publication theme######
 theme_publication <- function(base_size = 15, base_family = "Arial") {
   (theme_foundation(base_size = base_size, base_family = base_family)
