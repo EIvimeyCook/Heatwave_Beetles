@@ -1,4 +1,14 @@
-# Long-term evolution under heatwave conditions in the seed beetle, Callosobruchus maculatus
+<div align="center">
+ <h1>Heatwave_Beetles</h1>
+</div>
+
+<!-- badges: start -->
+[![Paper](https://img.shields.io/badge/paper-published-blue)](https://github.com/EIvimeyCook/Heatwave_Beetles)
+<!-- badges: end -->
+
+Data and code for the manuscript **"Long-Term Evolution Under Heatwave Conditions
+in the Seed Beetle, *Callosobruchus maculatus*"**.
+
 
 ## Overview
 Heatwaves, temporary periods of elevated temperatures, are increasing both in magnitude and in frequency and have devastating effects on many taxa. However, to date, most studies investigating the impacts of heatwaves have focused on populations that have evolved under constant conditions prior to assaying or have only investigated the short-term outcomes. Here, using the seed beetle, Callosobruchus maculatus, we investigated the long-term effects of evolution after 43 generations of fluctuating temperature with added heatwave exposure (a +2C increase peaking at 42C across 7 days, once every generation) on two important life history traits, development time and lifetime reproductive success (LRS). We find that populations that evolved under heatwave conditions eclosed at similar times but had lower LRS than those that evolved and were assayed under fluctuating conditions. When assayed at a novel constant and benign temperature of 29°C, beetles from both thermal regimes developed slower but had similar LRS. Together, this suggests that long-term heatwave exposure may incur only a very small cost to fitness, which disappears when individuals from those populations are exposed to benign control conditions. This study emphasises the potency of long-term multigenerational exposure to heatwaves in order to understand how populations respond to climate change.  
@@ -113,3 +123,9 @@ Scripts should be run in the following order:
 
 ---
 *README generated with READMEBuilder on 21 April 2026.*
+
+## Related work
+
+- [**Fluctuating_Beetles**](https://github.com/EIvimeyCook/Fluctuating_Beetles) —
+  genetic background and thermal regime in the same study system
+
