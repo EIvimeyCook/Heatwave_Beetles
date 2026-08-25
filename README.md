@@ -3,7 +3,7 @@
 </div>
 
 <!-- badges: start -->
-[![Paper](https://img.shields.io/badge/paper-published-blue)](https://github.com/EIvimeyCook/Heatwave_Beetles)
+[![Paper](https://img.shields.io/badge/paper-published-blue)](https://onlinelibrary.wiley.com/doi/10.1002/ece3.73562)
 <!-- badges: end -->
 
 Data and code for the manuscript **"Long-Term Evolution Under Heatwave Conditions
