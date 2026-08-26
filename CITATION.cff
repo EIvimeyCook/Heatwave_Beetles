@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software or these data, please cite both the repository and the associated publication below."
+type: dataset
+authors:
+  - family-names: "Ivimey-Cook"
+    given-names: "Edward R."
+    orcid: "https://orcid.org/0000-0003-4910-0443"
+  - family-names: "Glavan"
+    given-names: "Sarah"
+  - family-names: "Bricout"
+    given-names: "Sophie"
+  - family-names: "Piani"
+    given-names: "Claudio"
+  - family-names: "Berg"
+    given-names: "Elena C."
+title: "Data and code from: 'Long-Term Evolution Under Heatwave Conditions in the Seed Beetle, Callosobruchus maculatus'"
+url: "https://github.com/EIvimeyCook/Heatwave_Beetles"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Ivimey-Cook"
+      given-names: "Edward R."
+      orcid: "https://orcid.org/0000-0003-4910-0443"
+    - family-names: "Glavan"
+      given-names: "Sarah"
+    - family-names: "Bricout"
+      given-names: "Sophie"
+    - family-names: "Piani"
+      given-names: "Claudio"
+    - family-names: "Berg"
+      given-names: "Elena C."
+  title: "Long-Term Evolution Under Heatwave Conditions in the Seed Beetle, Callosobruchus maculatus"
+  journal: "Ecology and Evolution"
+  year: 2026
+  volume: 16
+  issue: 4
+  doi: 10.1002/ece3.73562
