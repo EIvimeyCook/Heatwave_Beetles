@@ -22,10 +22,6 @@ Edward R. Ivimey-Cook, Sarah Glavan, Sophie Bricout, Claudio Piani, and Elena C.
 School of Biological Sciences, University of East Anglia, UK
 The American University of Paris, Paris, France
 
-## Contact
-📧 Edward R. Ivimey-Cook — <e.ivimeycook@gmail.com> —
-[ORCID 0000-0003-4910-0443](https://orcid.org/0000-0003-4910-0443)
-
 ## Funding
 The American University of Paris
 
@@ -136,6 +132,10 @@ Scripts should be run in the following order:
 
 A machine-readable [`CITATION.cff`](CITATION.cff) is included, so GitHub's
 "Cite this repository" button gives formatted APA and BibTeX.
+
+## Contact
+📧 Edward R. Ivimey-Cook — <e.ivimeycook@gmail.com> —
+[ORCID 0000-0003-4910-0443](https://orcid.org/0000-0003-4910-0443)
 
 ## License
 
