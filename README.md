@@ -139,4 +139,5 @@ A machine-readable [`CITATION.cff`](CITATION.cff) is included, so GitHub's
 
 ## License
 
-Released under the [MIT License](LICENSE.md).
+Code is licensed under the [MIT License](LICENSE.md).
+Data are licensed under [CC BY 4.0](LICENSE-data.md).
