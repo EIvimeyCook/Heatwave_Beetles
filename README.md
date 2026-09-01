@@ -5,7 +5,7 @@
 <!-- badges: start -->
 [![DOI](https://img.shields.io/badge/DOI-10.1002%2Fece3.73562-blue)](https://doi.org/10.1002/ece3.73562)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE.md)
-[![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-green)](LICENSE-data.md)
+[![License: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-green)](LICENSE-data.md)
 <!-- badges: end -->
 
 Data and code for the manuscript **"Long-Term Evolution Under Heatwave Conditions
