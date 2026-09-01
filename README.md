@@ -131,3 +131,11 @@ Scripts should be run in the following order:
 - [**Fluctuating_Beetles**](https://github.com/EIvimeyCook/Fluctuating_Beetles) —
   genetic background and thermal regime in the same study system
 
+## Citation
+
+A machine-readable [`CITATION.cff`](CITATION.cff) is included, so GitHub's
+"Cite this repository" button gives formatted APA and BibTeX.
+
+## License
+
+Released under the [MIT License](LICENSE.md).
