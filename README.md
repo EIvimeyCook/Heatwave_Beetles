@@ -23,7 +23,8 @@ School of Biological Sciences, University of East Anglia, UK
 The American University of Paris, Paris, France
 
 ## Contact
-📧 Edward R. Ivimey-Cook: e.ivimeycook@gmail.com Elena C. Berg: eberg@aup.edu
+📧 Edward R. Ivimey-Cook — <e.ivimeycook@gmail.com> —
+[ORCID 0000-0003-4910-0443](https://orcid.org/0000-0003-4910-0443)
 
 ## Funding
 The American University of Paris
