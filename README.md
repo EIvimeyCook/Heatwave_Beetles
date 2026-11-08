@@ -31,11 +31,13 @@ The American University of Paris
 
 **Dimensions:** 22700 rows × 14 columns
 
+Each row is the number of adult offspring recorded for one mating pair, from eggs laid on one day, on one measure date.
+
 **Variables:**
 
-- `ID`: categorical | 600 unique values | NAs: 0: ID of the Individual
+- `ID`: categorical | 600 unique values | NAs: 0: ID of the mating pair (`Group`-`Pair ID`)
 - `Group`: categorical | 12 unique values | NAs: 0: 12 level group
-- `Treatment`: categorical | levels: F-C, F-F, H-C, H-H | NAs: 0: Treatment Group
+- `Treatment`: categorical | levels: F-C, F-F, H-C, H-H | NAs: 0: Evolved thermal regime and assay environment. First letter: regime (F = Fluctuating, H = Heatwave). F-C and H-C were assayed at constant 29°C; F-F and H-H are coded as the fluctuating assay environment (`env = "Fluctuating"` in `Script/02-load_tidy_data.R`)
 - `Replicate`: numeric | range 1–3 | mean 2.004 | NAs: 0 | **units:** Replicate Number
 - `Pairing date`: categorical | levels: 01-Feb-24, 10-Apr-24 | NAs: 0: Date of Pairing
 - `Pair ID`: numeric | range 1–50 | mean 25.5 | NAs: 0 | **units:** ID of Pair
@@ -44,12 +46,15 @@ The American University of Paris
 - `Date of measure`: categorical | 31 unique values | NAs: 0: Date of measuring
 - `Devt time`: numeric | range 19–34 | mean 25.61 | NAs: 0 | **units:** Development /Days
 - `males`: numeric | range 0–19 | mean 0.8877 | NAs: 0 | **units:** Number of Males
-- `females`: numeric | range 0–18 | mean 0.869 | NAs: 0 | **units:** Number of Males
+- `females`: numeric | range 0–18 | mean 0.869 | NAs: 0 | **units:** Number of Females
 - `Total`: numeric | range 0–29 | mean 1.757 | NAs: 0 | **units:** Total Number of Individuals
-- `Comments`: logical | TRUE: 0 | FALSE: 0 | NAs: 22700: Comments
+- `Comments`: categorical | levels: Failed (3), Male Dead (3), Just one fertilized bean (1) | NAs: 22693: Notes on the pair
 
 ### `sessionInfo.txt`
 
+`sessionInfo.txt` is an earlier record of the session and differs from `renv.lock` for some packages (for example lme4 1.1-36 vs 1.1-37). `renv.lock` is the reference for package versions.
+
+```
 R version 4.4.2 (2024-10-31)
 Platform: aarch64-apple-darwin20
 Running under: macOS Sequoia 15.3.2
@@ -98,19 +103,32 @@ loaded via a namespace (and not attached):
 [53] rbibutils_2.3        nlme_3.1-166         cli_3.6.4            textshaping_1.0.0   
 [57] sjstats_0.19.0       gtable_0.3.6         DEoptimR_1.1-3-1     farver_2.1.2        
 [61] lifecycle_1.0.4      gridtext_0.1.5       bit64_4.6.0-1       
+```
 
 ## Other Files
 
 ### `renv.lock`
 
-lockfile for renv. Links with the renv folder which contains the library of locked R packages. 
+`renv.lock` records the package versions for the project (R 4.4.2). The `renv/` folder holds only the renv bootstrap files and the renv package, not the locked packages, so they must be installed with `renv::restore()` (see Setup). 
 
-### `Analysis.RProj`
+### `Analysis.Rproj`
 
 RStudio Project file. Open this for everything to become relative to this project file. 
 
+## Setup
+Open `Analysis.Rproj` in RStudio, then run:
+
+```r
+source("renv/activate.R")
+renv::restore()
+```
+
+Note: `Script/01-load_packages.R` calls `renv::snapshot()` and rewrites `sessionInfo.txt`, so running it can change `renv.lock` and `sessionInfo.txt`. Remove those lines if you want to keep the recorded versions.
+
+Before running, create the output folders from the project root: `dir.create("outputs"); dir.create("Outputs"); dir.create("Figures")` (on macOS and Windows `outputs` and `Outputs` are the same folder). Run the scripts interactively in RStudio, because `modelchecker()` calls `View()`.
+
 ## Code
-Scripts should be run in the following order:
+Run `Script/04-figures.R` to reproduce everything. It sources 01 (packages, helpers), 02 (data tidying) and 03 (models). Its three `source()` calls currently point to `code/`, which does not exist; change them to `Script/` before running. To run only the models, run `Script/03-model.R`, which sources 01 and 02.
 
 1. **`Script/01-load_packages.R`**
 
@@ -119,6 +137,8 @@ Scripts should be run in the following order:
 3. **`Script/03-model.R`**
 
 4. **`Script/04-figures.R`**
+
+Outputs: model-check CSVs, `two_way_lrs.doc`, `robust_dt.doc`, `two_way_lrs_emmeans.csv` and `two_way_dt_emmeans.csv` in `outputs/` (the first model-check CSVs go to `Outputs/`); figures in `Figures/`.
 
 ---
 *README generated with READMEBuilder on 21 April 2026.*
