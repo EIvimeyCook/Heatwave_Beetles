@@ -52,7 +52,7 @@ Each row is the number of adult offspring recorded for one mating pair, from egg
 
 ### `sessionInfo.txt`
 
-`sessionInfo.txt` is an earlier record of the session and differs from `renv.lock` for some packages (for example lme4 1.1-36 vs 1.1-37). `renv.lock` is the reference for package versions.
+`sessionInfo.txt` records an earlier R session. The package versions to install are those in `renv.lock` (for example lme4 1.1-37).
 
 ```
 R version 4.4.2 (2024-10-31)
@@ -123,12 +123,12 @@ source("renv/activate.R")
 renv::restore()
 ```
 
-Note: `Script/01-load_packages.R` calls `renv::snapshot()` and rewrites `sessionInfo.txt`, so running it can change `renv.lock` and `sessionInfo.txt`. Remove those lines if you want to keep the recorded versions.
+Note: `Script/01-load_packages.R` updates the renv snapshot (`renv::snapshot()`, line 2) and writes `sessionInfo.txt` (line 33). To keep the recorded versions, skip those two lines.
 
 Before running, create the output folders from the project root: `dir.create("outputs"); dir.create("Outputs"); dir.create("Figures")` (on macOS and Windows `outputs` and `Outputs` are the same folder). Run the scripts interactively in RStudio, because `modelchecker()` calls `View()`.
 
 ## Code
-Run `Script/04-figures.R` to reproduce everything. It sources 01 (packages, helpers), 02 (data tidying) and 03 (models). Its three `source()` calls currently point to `code/`, which does not exist; change them to `Script/` before running. To run only the models, run `Script/03-model.R`, which sources 01 and 02.
+Run `Script/04-figures.R` to reproduce everything. It sources 01 (packages, helpers), 02 (data tidying) and 03 (models). Its three `source()` calls use the folder name `code/`; set them to `Script/`, where the scripts are, before running. To run only the models, run `Script/03-model.R`, which sources 01 and 02.
 
 1. **`Script/01-load_packages.R`**
 
@@ -140,8 +140,6 @@ Run `Script/04-figures.R` to reproduce everything. It sources 01 (packages, help
 
 Outputs: model-check CSVs, `two_way_lrs.doc`, `robust_dt.doc`, `two_way_lrs_emmeans.csv` and `two_way_dt_emmeans.csv` in `outputs/` (the first model-check CSVs go to `Outputs/`); figures in `Figures/`.
 
----
-*README generated with READMEBuilder on 21 April 2026.*
 
 ## Related work
 
